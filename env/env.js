@@ -3,7 +3,7 @@ module.exports = {
     local_port: 3306,
     local_host: '0.0.0.0',
     local_user: 'root',
-    local_password: 'root',
+    local_password: '911004wsrA',
     local_database: 'jobsearch',
     //* the following is remote server
     server_port: 8080,
