@@ -1,7 +1,7 @@
 module.exports = {
     // * the following is the local service
     local_port: 3306,
-    local_host: '0.0.0.0',
+    local_host: 'localhost',
     local_user: 'root',
     local_password: '911004wsrA',
     local_database: 'jobsearch',
