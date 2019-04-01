@@ -3,7 +3,8 @@ const env = require('../env/env')
 
 const dbConfig = {
     host: env.local_host,
-    port: env.local_port,
+    // port: env.local_port,
+    port: "var/run/mysqld/mysqld.sock",
     user: env.local_user,
     password: env.local_password,
     database: env.local_database,
