@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const cors = require('cors');
+const databaseApi = require("./mysql/databaseApi");
 
 // * modules imports
 const userController = require('./users_controller/controller');
@@ -46,9 +47,7 @@ app.get('/jobDescription/:id', searching.retriveJobDescription);
 
 
 // this is for nginx testing purpose
-app.get("/api", (req, res)=>{
-    res.send("the api is working...")
-})
+app.get("/api", databaseApi.test)
 
 app.listen(3000, () => {
     console.log('port starts at 3000')
