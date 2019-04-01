@@ -36,7 +36,7 @@ class UserController {
         // emailService.sendVerifyEmail(email, )
     }
 
-    static async confirmationUser(req, res, next) {
+    static confirmationUser(req, res, next) {
         try {
             const verifyResult = jwt.verify(req.params.token, `testhelloworldtest`);
             if (verifyResult !== null) {
@@ -65,7 +65,7 @@ class UserController {
         let userPassword = userInfo.password;
         dataBaseApi.findUser(req.body).then(response => {
             console.log(response);
-            res.send({...response, email: username});
+            res.send({ ...response, email: username });
         })
         // db.query(sqlQuery.findUser(username))
         //     .then(data => {
