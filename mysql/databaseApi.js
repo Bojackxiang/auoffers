@@ -55,7 +55,7 @@ class Database {
         console.log({
             'host': process.env.MYSQL_HOST,
             'user': process.env.MYSQL_USER,
-            'password': process.env.MYSQL_SECRET,å
+            'password': process.env.MYSQL_SECRET,
             'database': process.env.MYSQL_DB
         });
         let sql = `select * from posts`;
