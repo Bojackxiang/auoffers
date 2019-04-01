@@ -45,6 +45,11 @@ app.post('/newjobpost', jsonParser, post.newPost);
 app.get('/jobDescription/:id', searching.retriveJobDescription);
 
 
+// this is for nginx testing purpose
+app.get("/api", (req, res)=>{
+    res.send("the api is working...")
+})
+
 app.listen(3000, () => {
     console.log('port starts at 3000')
 });
