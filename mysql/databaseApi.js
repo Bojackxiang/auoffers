@@ -53,10 +53,10 @@ class Database {
 
     static test() {
         console.log({
-            host: process.env.MYSQL_HOST,
-            user: process.env.MYSQL_USER,
-            password: process.env.MYSQL_SECRET,å
-            database: process.env.MYSQL_DB
+            'host': process.env.MYSQL_HOST,
+            'user': process.env.MYSQL_USER,
+            'password': process.env.MYSQL_SECRET,å
+            'database': process.env.MYSQL_DB
         });
         let sql = `select * from posts`;
         console.log("get into the test")
