@@ -17,7 +17,7 @@ const post = require('./newPost/post');
 
 
 const corsOptions = {
-    origin: "http://localhost:4200",
+    origin: "178.128.14.161",
     optionsSuccessStatus: 200
 }
 app.use(bodyParser.urlencoded({
