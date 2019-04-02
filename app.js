@@ -13,9 +13,6 @@ const post = require('./newPost/post');
 // ! logging is still on holdå
 // const log4js = require('./log4js/log4js');
 
-
-
-
 const corsOptions = {
     origin: "http://zhaodandanxiangweijie.com",
     optionsSuccessStatus: 200
@@ -23,7 +20,7 @@ const corsOptions = {
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cors(corsOptions))
+app.use(cors())
 
 // *** setting up database
 require('./mysql/db')
