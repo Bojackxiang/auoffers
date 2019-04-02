@@ -17,7 +17,7 @@ const post = require('./newPost/post');
 
 
 const corsOptions = {
-    origin: "178.128.14.161",
+    origin: "http://zhaodandanxiangweijie.com",
     optionsSuccessStatus: 200
 }
 app.use(bodyParser.urlencoded({
