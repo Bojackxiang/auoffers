@@ -37,10 +37,10 @@ app.get('/userInfo', userController.retriveUserInfo);
 app.post('/userapply', jsonParser, userController.userApply);
 
 // * post routing
-app.get('/search', (res, res, next) => {
+app.get('/search', (req, res, next) => {
     console.log(req);
     next();
-}searching.revtriveListingResults);
+}, searching.revtriveListingResults);
 app.post('/newjobpost', jsonParser, post.newPost);
 // app.post('/mockdata', post.mockData, );
 app.get('/jobDescription/:id', searching.retriveJobDescription);
