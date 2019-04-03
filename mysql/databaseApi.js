@@ -51,12 +51,12 @@ class Database {
 
     }
 
-    static test() {
+    static test(req, res) {
         let sql = `select * from posts`;
         console.log("get into the test")
-        return db.query(sql).then(data => {
+        db.query(sql).then(data => {
             console.log(data)
-            return data;
+            res.send(data)
         }).catch(err => {
             console.log(err)
             return err;
