@@ -29,15 +29,18 @@ require('./mysql/db')
  * * routes
  */
 
- // * user routing
+// * user routing
 app.post('/register', jsonParser, userController.createUser);
 app.get('/confirmation/:token', jsonParser, userController.confirmationUser);
 app.post('/usersignin', jsonParser, userController.userLogin);
 app.get('/userInfo', userController.retriveUserInfo);
-app.post('/userapply',jsonParser, userController.userApply);
+app.post('/userapply', jsonParser, userController.userApply);
 
 // * post routing
-app.get('/search', searching.revtriveListingResults);
+app.get('/search', (res, res, next) => {
+    console.log(req);
+    next();
+}searching.revtriveListingResults);
 app.post('/newjobpost', jsonParser, post.newPost);
 // app.post('/mockdata', post.mockData, );
 app.get('/jobDescription/:id', searching.retriveJobDescription);
