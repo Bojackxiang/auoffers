@@ -16,6 +16,8 @@ class Searching {
 
         const countSql = `SELECT COUNT(postid) as totalCount FROM posts`;
         const sqlNumber = await db.query(countSql);
+        console.log("trying to have the num of row");
+        console.log(sqlNumber)
         let numberOfRow = sqlNumber[0].totalCount;
 
         // computed home many page is required
