@@ -11,6 +11,7 @@ class Searching {
         console.log('revtriveListingResults');
         let numPerPage = 10;
         let pageNumber = req.query['page'];
+        console.log(pageNumber);
 
         var skip = parseInt(pageNumber - 1) * numPerPage;
 
