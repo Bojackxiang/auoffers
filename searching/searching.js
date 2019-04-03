@@ -11,21 +11,17 @@ class Searching {
         console.log('revtriveListingResults');
         let numPerPage = 10;
         let pageNumber = req.query['page'];
-        
-        console.log(req.param)
-        console.log(req.query)
-        
+        console.log(`the page number is ${pageNumber}`);
 
         var skip = parseInt(pageNumber - 1) * numPerPage;
 
         const countSql = `SELECT COUNT(postid) as totalCount FROM posts`;
         const sqlNumber = await db.query(countSql);
-        console.log("trying to have the num of row");
+        
         let numberOfRow = sqlNumber[0].totalCount;
 
         // computed home many page is required
         let totalPageNumber = await Math.ceil(numberOfRow / numPerPage);
-        console.log(skip);
         
         //* retrive the job info
         let data = await db.query(`SELECT * FROM posts ORDER BY postdate DESC LIMIT 10 offset ${skip}`);
