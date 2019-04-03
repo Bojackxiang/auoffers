@@ -12,9 +12,9 @@ class Searching {
         let numPerPage = 10;
         let pageNumber = req.query['page'];
         
-        console.log("trying to have the page")
-        console.log(pageNumber);
-        console.log(req);
+        console.log(req.param)
+        console.log(req.query)
+        
 
         var skip = parseInt(pageNumber - 1) * numPerPage;
 
